@@ -1,3 +1,23 @@
+/**
+ * Create progress bar
+ */
+var progressBar = 0;
+var progress = '';
+var $wrap = $('#uploader'),
+    // Picture container
+    $queue = $('<ul class="filelist"></ul>').appendTo($wrap.find('.queueList')),
+    $totalProgressbar = $("#totalProgressBar");
+
+var progress = function (p) { //p percentage 0~1
+    return function (done) {
+        console.log(p)
+        $totalProgressbar.css('width', progressBar)
+        done();
+    }
+};
+
+
+
 /***
      *  upload files
      * @param file files to be uploaded
