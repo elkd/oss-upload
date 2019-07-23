@@ -9,8 +9,8 @@ var $wrap = $('#uploader'),
     $totalProgressbar = $("#totalProgressBar");
 
 var progress = function (p) { //p percentage 0~1
+    console.log(p);
     return function (done) {
-        console.log(p)
         $totalProgressbar.css('width', progressBar)
         done();
     }
